@@ -10,12 +10,12 @@
         <th>Dirección</th>
         <th>Grupo</th>
       </tr>
-      <tr>
+      <tr *ngFor="let dato of datosForm; let i = index">
         <td></td>
-        <td>{{ datosForm.nombre }}</td>
-        <td>{{ datosForm.cif }}</td>
-        <td>{{ datosForm.direccion }}</td>
-        <td>{{ datosForm.grupo }}</td>
+        <td>{{ dato.nombre }}</td>
+        <td>{{ dato.cif }}</td>
+        <td>{{ dato.direccion }}</td>
+        <td>{{ dato.grupo }}</td>
       </tr>
     </table>
   </div>

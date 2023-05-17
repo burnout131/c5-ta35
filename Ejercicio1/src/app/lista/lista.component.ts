@@ -7,5 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FormComponent {
   name = 'Listado clientes';
-  @Input() datosForm!: any;
+  
+  //Recibimos los datos del nuevo cliente
+  @Input() datosForm!: any[];
 }
