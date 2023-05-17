@@ -1,0 +1,51 @@
+<div class="container">
+  <form (submit)="submitForm()">
+
+    <div class="form-floating">
+      <span class="col-1 text-center">
+        <label for="name" class="form-label">Nombre y apellido:</label>
+        </span>
+      <input type="text" name="name" class="form-control" id="name" [(ngModel)]="name" required />
+      <div *ngIf="invalidName" style="display: flex;" class="invalid-feedback">
+        Introduzca su nombre y apellido
+      </div>
+    </div>
+
+    <br>
+
+    <div class="form-floating">
+      <span class="col-1 text-center">
+        <label for="email" class="form-label">Email:</label>
+        </span>
+      <input type="text" class="form-control" id="email" [(ngModel)]="email" name="email" required>
+      <div *ngIf="invalidEmail" style="display: flex;" class="invalid-feedback">
+        Introduzca su nombre y apellido
+      </div>
+    </div>
+
+    <br>
+
+    <div class="form-floating">
+      <label for="message">Mensaje</label>
+      <textarea class="form-control" id="message" [(ngModel)]="message" name="message" required></textarea>
+      <div *ngIf="invalidMessage" style="display: flex;" class="invalid-feedback">
+        Introduzca un mensaje
+      </div>
+    </div>
+
+    <br>
+
+    <div class="form-floating">
+      <label for="suma">{{ num1 }} + {{ num2 }} = ?</label>
+      <input type="number" class="form-control" id="sum" [(ngModel)]="sum" name="sum" required>
+      <div *ngIf="invalidSum" style="display: flex;" class="invalid-feedback">
+        Validación anti-spam incorrecta
+      </div>
+    </div>
+
+    <br>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+
+  </form>
+</div>
